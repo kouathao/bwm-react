@@ -1,11 +1,9 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React from "react";
 import { RentalList } from "./RentalList";
+import { connect } from "react-redux";
+import * as actions from "actions";
 
-import * as actions from "../../../actions";
-
-class RentalListing extends Component {
-  // displach actions
+class RentalListing extends React.Component {
   componentDidMount() {
     this.props.dispatch(actions.fetchRentals());
   }
